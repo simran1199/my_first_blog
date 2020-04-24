@@ -10,7 +10,12 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
 //app config
-mongoose.connect("mongodb://localhost:27017/myblogapp");
+//mongoose.connect("mongodb://localhost:27017/myblogapp");
+
+mongoose.connect("mongodb+srv://simran:salvatores@cluster0-ym1mo.mongodb.net/test?retryWrites=true&w=majority");
+
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended:true}));
